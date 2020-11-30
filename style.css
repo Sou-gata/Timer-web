@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    background: #060a1f;
+}
+.time-input {
+    display: flex;
+    margin: 5px;
+}
+.input-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.time-min,
+.time-sec {
+    height: 50px;
+    width: 150px;
+    outline: none;
+    border: 2px solid #2196f3;
+    color: #f1f1f1;
+    border-radius: 25px;
+    background: #0e0e0e0e;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.time-min:disabled,
+.time-sec:disabled {
+    opacity: 0.5;
+}
+.btn-min,
+.btn-sec {
+    margin-left: 20px;
+    height: 50px;
+    width: 75px;
+    border-radius: 25px;
+    font-size: 20px;
+    outline: none;
+    border: 2px solid #ff006a;
+    background: #ff006a;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-min:hover,
+.btn-sec:hover {
+    background: none;
+}
+.btn-min:active,
+.btn-sec:active {
+    transform: scale(0.9);
+}
+.or {
+    color: #e0e0e0;
+    font-size: 30px;
+    font-weight: 600;
+}
+.timer-container {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+.timer-container div {
+    position: relative;
+    margin: 0 5px;
+}
+.timer-container div span {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    background: #2196f3;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.timer-container div span:nth-child(2) {
+    height: 30px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 300;
+    z-index: 9;
+    background: #127fd6;
+    text-transform: uppercase;
+}
+
+.timer-container div:nth-child(2) span {
+    background: #ff006a;
+}
+.timer-container div:nth-child(2) span:nth-child(2) {
+    background: #d10057;
+}
