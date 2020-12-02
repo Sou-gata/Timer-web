@@ -5,6 +5,19 @@ const ButtonSec = document.querySelector(".btn-sec");
 const TimerMinutes = document.querySelector(".minutes");
 const TimerSeconds = document.querySelector(".seconds");
 
+TimeMin.addEventListener("keyup", (e) => {
+    if (e.key == "Enter") {
+        e.preventDefault();
+        ButtonMin.click();
+    }
+});
+TimeSec.addEventListener("keyup", (e) => {
+    if (e.key == "Enter") {
+        e.preventDefault();
+        ButtonSec.click();
+    }
+});
+
 ButtonMin.addEventListener("click", () => {
     let InputValue = TimeMin.value;
     let MintoSec = Math.floor(CheckValue(InputValue) * 60);
